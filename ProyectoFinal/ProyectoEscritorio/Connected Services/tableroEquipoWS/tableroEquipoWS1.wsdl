@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://webservices/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="tableroEquipoWS" targetNamespace="http://webservices/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://jorgenorza.ga:8080/ProyectoFinalWS/tableroEquipoWS?xsd=1" namespace="http://webservices/" />
+    </xsd:schema>
+  </types>
+  <message name="CrearTableroEquipo">
+    <part name="parameters" element="tns:CrearTableroEquipo" />
+  </message>
+  <message name="CrearTableroEquipoResponse">
+    <part name="parameters" element="tns:CrearTableroEquipoResponse" />
+  </message>
+  <message name="EliminarTableroEquipo">
+    <part name="parameters" element="tns:EliminarTableroEquipo" />
+  </message>
+  <message name="EliminarTableroEquipoResponse">
+    <part name="parameters" element="tns:EliminarTableroEquipoResponse" />
+  </message>
+  <message name="EliminarTableroEquipos">
+    <part name="parameters" element="tns:EliminarTableroEquipos" />
+  </message>
+  <message name="EliminarTableroEquiposResponse">
+    <part name="parameters" element="tns:EliminarTableroEquiposResponse" />
+  </message>
+  <message name="SeleccionarTableroEquipo">
+    <part name="parameters" element="tns:SeleccionarTableroEquipo" />
+  </message>
+  <message name="SeleccionarTableroEquipoResponse">
+    <part name="parameters" element="tns:SeleccionarTableroEquipoResponse" />
+  </message>
+  <message name="ObtenerTablerosDeEquipo">
+    <part name="parameters" element="tns:ObtenerTablerosDeEquipo" />
+  </message>
+  <message name="ObtenerTablerosDeEquipoResponse">
+    <part name="parameters" element="tns:ObtenerTablerosDeEquipoResponse" />
+  </message>
+  <message name="ObtenerEquiposDeTablero">
+    <part name="parameters" element="tns:ObtenerEquiposDeTablero" />
+  </message>
+  <message name="ObtenerEquiposDeTableroResponse">
+    <part name="parameters" element="tns:ObtenerEquiposDeTableroResponse" />
+  </message>
+  <portType name="tableroEquipoWS">
+    <operation name="CrearTableroEquipo">
+      <input wsam:Action="http://webservices/tableroEquipoWS/CrearTableroEquipoRequest" message="tns:CrearTableroEquipo" />
+      <output wsam:Action="http://webservices/tableroEquipoWS/CrearTableroEquipoResponse" message="tns:CrearTableroEquipoResponse" />
+    </operation>
+    <operation name="EliminarTableroEquipo">
+      <input wsam:Action="http://webservices/tableroEquipoWS/EliminarTableroEquipoRequest" message="tns:EliminarTableroEquipo" />
+      <output wsam:Action="http://webservices/tableroEquipoWS/EliminarTableroEquipoResponse" message="tns:EliminarTableroEquipoResponse" />
+    </operation>
+    <operation name="EliminarTableroEquipos">
+      <input wsam:Action="http://webservices/tableroEquipoWS/EliminarTableroEquiposRequest" message="tns:EliminarTableroEquipos" />
+      <output wsam:Action="http://webservices/tableroEquipoWS/EliminarTableroEquiposResponse" message="tns:EliminarTableroEquiposResponse" />
+    </operation>
+    <operation name="SeleccionarTableroEquipo">
+      <input wsam:Action="http://webservices/tableroEquipoWS/SeleccionarTableroEquipoRequest" message="tns:SeleccionarTableroEquipo" />
+      <output wsam:Action="http://webservices/tableroEquipoWS/SeleccionarTableroEquipoResponse" message="tns:SeleccionarTableroEquipoResponse" />
+    </operation>
+    <operation name="ObtenerTablerosDeEquipo">
+      <input wsam:Action="http://webservices/tableroEquipoWS/ObtenerTablerosDeEquipoRequest" message="tns:ObtenerTablerosDeEquipo" />
+      <output wsam:Action="http://webservices/tableroEquipoWS/ObtenerTablerosDeEquipoResponse" message="tns:ObtenerTablerosDeEquipoResponse" />
+    </operation>
+    <operation name="ObtenerEquiposDeTablero">
+      <input wsam:Action="http://webservices/tableroEquipoWS/ObtenerEquiposDeTableroRequest" message="tns:ObtenerEquiposDeTablero" />
+      <output wsam:Action="http://webservices/tableroEquipoWS/ObtenerEquiposDeTableroResponse" message="tns:ObtenerEquiposDeTableroResponse" />
+    </operation>
+  </portType>
+  <binding name="tableroEquipoWSPortBinding" type="tns:tableroEquipoWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="CrearTableroEquipo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EliminarTableroEquipo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EliminarTableroEquipos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SeleccionarTableroEquipo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ObtenerTablerosDeEquipo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ObtenerEquiposDeTablero">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="tableroEquipoWS">
+    <port name="tableroEquipoWSPort" binding="tns:tableroEquipoWSPortBinding">
+      <soap:address location="http://jorgenorza.ga:8080/ProyectoFinalWS/tableroEquipoWS" />
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://webservices/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ComentarioWS" targetNamespace="http://webservices/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://jorgenorza.ga:8080/ProyectoFinalWS/ComentarioWS?xsd=1" namespace="http://webservices/" />
+    </xsd:schema>
+  </types>
+  <message name="CrearComentario">
+    <part name="parameters" element="tns:CrearComentario" />
+  </message>
+  <message name="CrearComentarioResponse">
+    <part name="parameters" element="tns:CrearComentarioResponse" />
+  </message>
+  <message name="EliminarComentario">
+    <part name="parameters" element="tns:EliminarComentario" />
+  </message>
+  <message name="EliminarComentarioResponse">
+    <part name="parameters" element="tns:EliminarComentarioResponse" />
+  </message>
+  <message name="SeleccionarComentario">
+    <part name="parameters" element="tns:SeleccionarComentario" />
+  </message>
+  <message name="SeleccionarComentarioResponse">
+    <part name="parameters" element="tns:SeleccionarComentarioResponse" />
+  </message>
+  <message name="ObtenerComentariosDeActividad">
+    <part name="parameters" element="tns:ObtenerComentariosDeActividad" />
+  </message>
+  <message name="ObtenerComentariosDeActividadResponse">
+    <part name="parameters" element="tns:ObtenerComentariosDeActividadResponse" />
+  </message>
+  <message name="ObtenerComentariosDeUsuario">
+    <part name="parameters" element="tns:ObtenerComentariosDeUsuario" />
+  </message>
+  <message name="ObtenerComentariosDeUsuarioResponse">
+    <part name="parameters" element="tns:ObtenerComentariosDeUsuarioResponse" />
+  </message>
+  <portType name="ComentarioWS">
+    <operation name="CrearComentario">
+      <input wsam:Action="http://webservices/ComentarioWS/CrearComentarioRequest" message="tns:CrearComentario" />
+      <output wsam:Action="http://webservices/ComentarioWS/CrearComentarioResponse" message="tns:CrearComentarioResponse" />
+    </operation>
+    <operation name="EliminarComentario">
+      <input wsam:Action="http://webservices/ComentarioWS/EliminarComentarioRequest" message="tns:EliminarComentario" />
+      <output wsam:Action="http://webservices/ComentarioWS/EliminarComentarioResponse" message="tns:EliminarComentarioResponse" />
+    </operation>
+    <operation name="SeleccionarComentario">
+      <input wsam:Action="http://webservices/ComentarioWS/SeleccionarComentarioRequest" message="tns:SeleccionarComentario" />
+      <output wsam:Action="http://webservices/ComentarioWS/SeleccionarComentarioResponse" message="tns:SeleccionarComentarioResponse" />
+    </operation>
+    <operation name="ObtenerComentariosDeActividad">
+      <input wsam:Action="http://webservices/ComentarioWS/ObtenerComentariosDeActividadRequest" message="tns:ObtenerComentariosDeActividad" />
+      <output wsam:Action="http://webservices/ComentarioWS/ObtenerComentariosDeActividadResponse" message="tns:ObtenerComentariosDeActividadResponse" />
+    </operation>
+    <operation name="ObtenerComentariosDeUsuario">
+      <input wsam:Action="http://webservices/ComentarioWS/ObtenerComentariosDeUsuarioRequest" message="tns:ObtenerComentariosDeUsuario" />
+      <output wsam:Action="http://webservices/ComentarioWS/ObtenerComentariosDeUsuarioResponse" message="tns:ObtenerComentariosDeUsuarioResponse" />
+    </operation>
+  </portType>
+  <binding name="ComentarioWSPortBinding" type="tns:ComentarioWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="CrearComentario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EliminarComentario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SeleccionarComentario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ObtenerComentariosDeActividad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ObtenerComentariosDeUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ComentarioWS">
+    <port name="ComentarioWSPort" binding="tns:ComentarioWSPortBinding">
+      <soap:address location="http://jorgenorza.ga:8080/ProyectoFinalWS/ComentarioWS" />
+    </port>
+  </service>
+</definitions>

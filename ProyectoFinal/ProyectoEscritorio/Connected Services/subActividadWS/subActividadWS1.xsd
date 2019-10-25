@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://webservices/" targetNamespace="http://webservices/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="AgregarSubActividad" type="tns:AgregarSubActividad" />
+  <xs:element name="AgregarSubActividadResponse" type="tns:AgregarSubActividadResponse" />
+  <xs:element name="EditarSubActividad" type="tns:EditarSubActividad" />
+  <xs:element name="EditarSubActividadResponse" type="tns:EditarSubActividadResponse" />
+  <xs:element name="EliminarSubActividad" type="tns:EliminarSubActividad" />
+  <xs:element name="EliminarSubActividadResponse" type="tns:EliminarSubActividadResponse" />
+  <xs:element name="EliminarSubActividades" type="tns:EliminarSubActividades" />
+  <xs:element name="EliminarSubActividadesResponse" type="tns:EliminarSubActividadesResponse" />
+  <xs:element name="ObtenerSubActividadesDeActividad" type="tns:ObtenerSubActividadesDeActividad" />
+  <xs:element name="ObtenerSubActividadesDeActividadResponse" type="tns:ObtenerSubActividadesDeActividadResponse" />
+  <xs:element name="ObtenerSubActividadesDeUsuario" type="tns:ObtenerSubActividadesDeUsuario" />
+  <xs:element name="ObtenerSubActividadesDeUsuarioResponse" type="tns:ObtenerSubActividadesDeUsuarioResponse" />
+  <xs:element name="SeleccionarSubActividad" type="tns:SeleccionarSubActividad" />
+  <xs:element name="SeleccionarSubActividadResponse" type="tns:SeleccionarSubActividadResponse" />
+  <xs:complexType name="SeleccionarSubActividad">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SeleccionarSubActividadResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:subActividad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="subActividad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="estado" type="xs:string" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element name="idActividad" type="xs:int" />
+      <xs:element name="idUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="vencimiento" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObtenerSubActividadesDeActividad">
+    <xs:sequence>
+      <xs:element name="idActividad" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObtenerSubActividadesDeActividadResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:subActividad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EditarSubActividad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="vencimiento" type="xs:string" />
+      <xs:element minOccurs="0" name="estado" type="xs:string" />
+      <xs:element name="idActividad" type="xs:int" />
+      <xs:element name="idUsuario" type="xs:int" />
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EditarSubActividadResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliminarSubActividades">
+    <xs:sequence>
+      <xs:element name="idActvidad" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliminarSubActividadesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliminarSubActividad">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliminarSubActividadResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AgregarSubActividad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="vencimiento" type="xs:string" />
+      <xs:element minOccurs="0" name="estado" type="xs:string" />
+      <xs:element name="idActividad" type="xs:int" />
+      <xs:element name="idUsuario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AgregarSubActividadResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObtenerSubActividadesDeUsuario">
+    <xs:sequence>
+      <xs:element name="idUsuario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObtenerSubActividadesDeUsuarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:subActividad" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

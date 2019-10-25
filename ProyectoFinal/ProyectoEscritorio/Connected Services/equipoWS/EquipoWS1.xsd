@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://webservices/" targetNamespace="http://webservices/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="AgregarEquipo" type="tns:AgregarEquipo" />
+  <xs:element name="AgregarEquipoResponse" type="tns:AgregarEquipoResponse" />
+  <xs:element name="EditarEquipo" type="tns:EditarEquipo" />
+  <xs:element name="EditarEquipoResponse" type="tns:EditarEquipoResponse" />
+  <xs:element name="EliminarEquipo" type="tns:EliminarEquipo" />
+  <xs:element name="EliminarEquipoResponse" type="tns:EliminarEquipoResponse" />
+  <xs:element name="SeleccionarEquipo" type="tns:SeleccionarEquipo" />
+  <xs:element name="SeleccionarEquipoResponse" type="tns:SeleccionarEquipoResponse" />
+  <xs:complexType name="EditarEquipo">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EditarEquipoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AgregarEquipo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AgregarEquipoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SeleccionarEquipo">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SeleccionarEquipoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:equipo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="equipo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliminarEquipo">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliminarEquipoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

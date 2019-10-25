@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://webservices/" targetNamespace="http://webservices/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="CrearTableroEquipo" type="tns:CrearTableroEquipo" />
+  <xs:element name="CrearTableroEquipoResponse" type="tns:CrearTableroEquipoResponse" />
+  <xs:element name="EliminarTableroEquipo" type="tns:EliminarTableroEquipo" />
+  <xs:element name="EliminarTableroEquipoResponse" type="tns:EliminarTableroEquipoResponse" />
+  <xs:element name="EliminarTableroEquipos" type="tns:EliminarTableroEquipos" />
+  <xs:element name="EliminarTableroEquiposResponse" type="tns:EliminarTableroEquiposResponse" />
+  <xs:element name="ObtenerEquiposDeTablero" type="tns:ObtenerEquiposDeTablero" />
+  <xs:element name="ObtenerEquiposDeTableroResponse" type="tns:ObtenerEquiposDeTableroResponse" />
+  <xs:element name="ObtenerTablerosDeEquipo" type="tns:ObtenerTablerosDeEquipo" />
+  <xs:element name="ObtenerTablerosDeEquipoResponse" type="tns:ObtenerTablerosDeEquipoResponse" />
+  <xs:element name="SeleccionarTableroEquipo" type="tns:SeleccionarTableroEquipo" />
+  <xs:element name="SeleccionarTableroEquipoResponse" type="tns:SeleccionarTableroEquipoResponse" />
+  <xs:complexType name="ObtenerTablerosDeEquipo">
+    <xs:sequence>
+      <xs:element name="idEquipo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObtenerTablerosDeEquipoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:tablero" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tablero">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:int" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="titulo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObtenerEquiposDeTablero">
+    <xs:sequence>
+      <xs:element name="idTablero" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObtenerEquiposDeTableroResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:equipo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="equipo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CrearTableroEquipo">
+    <xs:sequence>
+      <xs:element name="idTablero" type="xs:int" />
+      <xs:element name="idEquipo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CrearTableroEquipoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SeleccionarTableroEquipo">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SeleccionarTableroEquipoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:tableroEquipo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tableroEquipo">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+      <xs:element name="idEquipo" type="xs:int" />
+      <xs:element name="idTablero" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliminarTableroEquipo">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliminarTableroEquipoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliminarTableroEquipos">
+    <xs:sequence>
+      <xs:element name="idTablero" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EliminarTableroEquiposResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

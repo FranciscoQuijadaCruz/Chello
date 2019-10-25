@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://webservices/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="ModificacionWS" targetNamespace="http://webservices/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://jorgenorza.ga:8080/ProyectoFinalWS/ModificacionWS?xsd=1" namespace="http://webservices/" />
+    </xsd:schema>
+  </types>
+  <message name="ObtenerModificacionesDeTablero">
+    <part name="parameters" element="tns:ObtenerModificacionesDeTablero" />
+  </message>
+  <message name="ObtenerModificacionesDeTableroResponse">
+    <part name="parameters" element="tns:ObtenerModificacionesDeTableroResponse" />
+  </message>
+  <message name="CrearModificacion">
+    <part name="parameters" element="tns:CrearModificacion" />
+  </message>
+  <message name="CrearModificacionResponse">
+    <part name="parameters" element="tns:CrearModificacionResponse" />
+  </message>
+  <message name="EliminarModificacion">
+    <part name="parameters" element="tns:EliminarModificacion" />
+  </message>
+  <message name="EliminarModificacionResponse">
+    <part name="parameters" element="tns:EliminarModificacionResponse" />
+  </message>
+  <message name="SeleccionarModificacion">
+    <part name="parameters" element="tns:SeleccionarModificacion" />
+  </message>
+  <message name="SeleccionarModificacionResponse">
+    <part name="parameters" element="tns:SeleccionarModificacionResponse" />
+  </message>
+  <message name="ObtenerModificacionesDeUsuario">
+    <part name="parameters" element="tns:ObtenerModificacionesDeUsuario" />
+  </message>
+  <message name="ObtenerModificacionesDeUsuarioResponse">
+    <part name="parameters" element="tns:ObtenerModificacionesDeUsuarioResponse" />
+  </message>
+  <portType name="ModificacionWS">
+    <operation name="ObtenerModificacionesDeTablero">
+      <input wsam:Action="http://webservices/ModificacionWS/ObtenerModificacionesDeTableroRequest" message="tns:ObtenerModificacionesDeTablero" />
+      <output wsam:Action="http://webservices/ModificacionWS/ObtenerModificacionesDeTableroResponse" message="tns:ObtenerModificacionesDeTableroResponse" />
+    </operation>
+    <operation name="CrearModificacion">
+      <input wsam:Action="http://webservices/ModificacionWS/CrearModificacionRequest" message="tns:CrearModificacion" />
+      <output wsam:Action="http://webservices/ModificacionWS/CrearModificacionResponse" message="tns:CrearModificacionResponse" />
+    </operation>
+    <operation name="EliminarModificacion">
+      <input wsam:Action="http://webservices/ModificacionWS/EliminarModificacionRequest" message="tns:EliminarModificacion" />
+      <output wsam:Action="http://webservices/ModificacionWS/EliminarModificacionResponse" message="tns:EliminarModificacionResponse" />
+    </operation>
+    <operation name="SeleccionarModificacion">
+      <input wsam:Action="http://webservices/ModificacionWS/SeleccionarModificacionRequest" message="tns:SeleccionarModificacion" />
+      <output wsam:Action="http://webservices/ModificacionWS/SeleccionarModificacionResponse" message="tns:SeleccionarModificacionResponse" />
+    </operation>
+    <operation name="ObtenerModificacionesDeUsuario">
+      <input wsam:Action="http://webservices/ModificacionWS/ObtenerModificacionesDeUsuarioRequest" message="tns:ObtenerModificacionesDeUsuario" />
+      <output wsam:Action="http://webservices/ModificacionWS/ObtenerModificacionesDeUsuarioResponse" message="tns:ObtenerModificacionesDeUsuarioResponse" />
+    </operation>
+  </portType>
+  <binding name="ModificacionWSPortBinding" type="tns:ModificacionWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="ObtenerModificacionesDeTablero">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CrearModificacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EliminarModificacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SeleccionarModificacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ObtenerModificacionesDeUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ModificacionWS">
+    <port name="ModificacionWSPort" binding="tns:ModificacionWSPortBinding">
+      <soap:address location="http://jorgenorza.ga:8080/ProyectoFinalWS/ModificacionWS" />
+    </port>
+  </service>
+</definitions>

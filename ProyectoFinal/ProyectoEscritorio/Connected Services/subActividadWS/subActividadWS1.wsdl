@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://webservices/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="subActividadWS" targetNamespace="http://webservices/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://jorgenorza.ga:8080/ProyectoFinalWS/subActividadWS?xsd=1" namespace="http://webservices/" />
+    </xsd:schema>
+  </types>
+  <message name="AgregarSubActividad">
+    <part name="parameters" element="tns:AgregarSubActividad" />
+  </message>
+  <message name="AgregarSubActividadResponse">
+    <part name="parameters" element="tns:AgregarSubActividadResponse" />
+  </message>
+  <message name="EliminarSubActividad">
+    <part name="parameters" element="tns:EliminarSubActividad" />
+  </message>
+  <message name="EliminarSubActividadResponse">
+    <part name="parameters" element="tns:EliminarSubActividadResponse" />
+  </message>
+  <message name="EliminarSubActividades">
+    <part name="parameters" element="tns:EliminarSubActividades" />
+  </message>
+  <message name="EliminarSubActividadesResponse">
+    <part name="parameters" element="tns:EliminarSubActividadesResponse" />
+  </message>
+  <message name="EditarSubActividad">
+    <part name="parameters" element="tns:EditarSubActividad" />
+  </message>
+  <message name="EditarSubActividadResponse">
+    <part name="parameters" element="tns:EditarSubActividadResponse" />
+  </message>
+  <message name="SeleccionarSubActividad">
+    <part name="parameters" element="tns:SeleccionarSubActividad" />
+  </message>
+  <message name="SeleccionarSubActividadResponse">
+    <part name="parameters" element="tns:SeleccionarSubActividadResponse" />
+  </message>
+  <message name="ObtenerSubActividadesDeActividad">
+    <part name="parameters" element="tns:ObtenerSubActividadesDeActividad" />
+  </message>
+  <message name="ObtenerSubActividadesDeActividadResponse">
+    <part name="parameters" element="tns:ObtenerSubActividadesDeActividadResponse" />
+  </message>
+  <message name="ObtenerSubActividadesDeUsuario">
+    <part name="parameters" element="tns:ObtenerSubActividadesDeUsuario" />
+  </message>
+  <message name="ObtenerSubActividadesDeUsuarioResponse">
+    <part name="parameters" element="tns:ObtenerSubActividadesDeUsuarioResponse" />
+  </message>
+  <portType name="subActividadWS">
+    <operation name="AgregarSubActividad">
+      <input wsam:Action="http://webservices/subActividadWS/AgregarSubActividadRequest" message="tns:AgregarSubActividad" />
+      <output wsam:Action="http://webservices/subActividadWS/AgregarSubActividadResponse" message="tns:AgregarSubActividadResponse" />
+    </operation>
+    <operation name="EliminarSubActividad">
+      <input wsam:Action="http://webservices/subActividadWS/EliminarSubActividadRequest" message="tns:EliminarSubActividad" />
+      <output wsam:Action="http://webservices/subActividadWS/EliminarSubActividadResponse" message="tns:EliminarSubActividadResponse" />
+    </operation>
+    <operation name="EliminarSubActividades">
+      <input wsam:Action="http://webservices/subActividadWS/EliminarSubActividadesRequest" message="tns:EliminarSubActividades" />
+      <output wsam:Action="http://webservices/subActividadWS/EliminarSubActividadesResponse" message="tns:EliminarSubActividadesResponse" />
+    </operation>
+    <operation name="EditarSubActividad">
+      <input wsam:Action="http://webservices/subActividadWS/EditarSubActividadRequest" message="tns:EditarSubActividad" />
+      <output wsam:Action="http://webservices/subActividadWS/EditarSubActividadResponse" message="tns:EditarSubActividadResponse" />
+    </operation>
+    <operation name="SeleccionarSubActividad">
+      <input wsam:Action="http://webservices/subActividadWS/SeleccionarSubActividadRequest" message="tns:SeleccionarSubActividad" />
+      <output wsam:Action="http://webservices/subActividadWS/SeleccionarSubActividadResponse" message="tns:SeleccionarSubActividadResponse" />
+    </operation>
+    <operation name="ObtenerSubActividadesDeActividad">
+      <input wsam:Action="http://webservices/subActividadWS/ObtenerSubActividadesDeActividadRequest" message="tns:ObtenerSubActividadesDeActividad" />
+      <output wsam:Action="http://webservices/subActividadWS/ObtenerSubActividadesDeActividadResponse" message="tns:ObtenerSubActividadesDeActividadResponse" />
+    </operation>
+    <operation name="ObtenerSubActividadesDeUsuario">
+      <input wsam:Action="http://webservices/subActividadWS/ObtenerSubActividadesDeUsuarioRequest" message="tns:ObtenerSubActividadesDeUsuario" />
+      <output wsam:Action="http://webservices/subActividadWS/ObtenerSubActividadesDeUsuarioResponse" message="tns:ObtenerSubActividadesDeUsuarioResponse" />
+    </operation>
+  </portType>
+  <binding name="subActividadWSPortBinding" type="tns:subActividadWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="AgregarSubActividad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EliminarSubActividad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EliminarSubActividades">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="EditarSubActividad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SeleccionarSubActividad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ObtenerSubActividadesDeActividad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ObtenerSubActividadesDeUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="subActividadWS">
+    <port name="subActividadWSPort" binding="tns:subActividadWSPortBinding">
+      <soap:address location="http://jorgenorza.ga:8080/ProyectoFinalWS/subActividadWS" />
+    </port>
+  </service>
+</definitions>
